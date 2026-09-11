@@ -7,11 +7,13 @@ Display all text in `internal.html` using the Creepster font linked by the user,
 ## Design
 
 - Add Google Fonts preconnect hints and the Creepster CSS stylesheet link to the document `<head>`.
-- Add a page-scoped body rule in `internal.html` that uses `"Creepster", cursive`.
+- Add a page-specific `internal.css` stylesheet containing the body rule that uses `"Creepster", cursive`.
+- Link `internal.css` from `internal.html` instead of embedding CSS in the page.
 - Keep the existing shared `styles.css` link intact and make no changes to `index.html`.
 
 ## Verification
 
 - Confirm the Google Fonts URL is the CSS endpoint for Creepster rather than the specimen webpage.
-- Confirm `internal.html` assigns Creepster to the body and remains valid HTML.
+- Confirm `internal.html` links `internal.css` and contains no embedded CSS.
+- Confirm `internal.css` assigns Creepster to the body.
 - Confirm no other project page is modified.
